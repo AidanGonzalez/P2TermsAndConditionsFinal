@@ -261,9 +261,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a90a3ad7ee08164f8906017e0346dc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
-  playerControllerScript: {fileID: 0}
-  leftBound: -15
 --- !u!1 &322778649
 GameObject:
   m_ObjectHideFlags: 0
