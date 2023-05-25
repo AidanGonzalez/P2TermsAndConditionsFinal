@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     private int score;
     private float spawnRate = 1.0f;
     public TextMeshProUGUI scoreText;
+    public List<GameObject> obstaclePrefabs;
 
     // Start is called before the first frame update
     void Start()
@@ -51,16 +52,15 @@ public class GameManager : MonoBehaviour
     {
             
     }
+  
 
-    void SpawnObstacle()
+    IEnumerator SpawnObstacle()
     {
-        if (playerControllerScript.gameOver == false)
+        while (true)
         {
-            int animalIndex = Random.Range(0, obstaclePrefab.Length);
-            Instantiate(obstaclePrefab[animalIndex], new Vector3(30, 1, 0), obstaclePrefab[animalIndex].transform.rotation);
+            yield return new WaitForSeconds(spawnRate);
+            int index = Random.Range(0, obstaclePrefabs.Count);
+            Instantiate(obstaclePrefabs[index]);   
         }
     }
-
-   
-
 }
