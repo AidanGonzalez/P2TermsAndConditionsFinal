@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8039769322001684066}
   - component: {fileID: 5221370524540510888}
   - component: {fileID: 5660747933012895208}
+  - component: {fileID: -5724699811388402942}
   m_Layer: 0
   m_Name: SharkV1
   m_TagString: Untagged
@@ -96,3 +97,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87e068d8588a5ae45ad480db90434076, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &-5724699811388402942
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6014263336760312701}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.869073, y: 1.8705177, z: 2.4034388}
+  m_Center: {x: -0.020836353, y: 0.29585555, z: 0}

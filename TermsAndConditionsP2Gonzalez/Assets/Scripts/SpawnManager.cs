@@ -21,10 +21,16 @@ public class SpawnManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+            
+    }
+
+    void SpawnObstacle()
+    {
         if (playerControllerScript.gameOver == false)
         {
-            int animalIndex = Random.Range(0, animalPrefabs.Length);
-            Instantiate(animalPrefabs[obstaclePrefab], new Vector3(30, 1, 0), obstaclePrefab[]
+            int animalIndex = Random.Range(0, obstaclePrefab.Length);
+            Instantiate(obstaclePrefab[animalIndex], new Vector3(30, 1, 0), obstaclePrefab[animalIndex].transform.rotation);
         }
     }
+
 }
