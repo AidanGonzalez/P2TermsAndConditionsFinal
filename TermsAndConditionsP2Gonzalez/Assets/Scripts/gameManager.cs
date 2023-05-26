@@ -20,6 +20,8 @@ public class GameManager : MonoBehaviour
     private float spawnRate = 1.0f;
     public TextMeshProUGUI scoreText;
     public List<GameObject> obstaclePrefabs;
+    public TextMeshProUGUI gameOverText;
+    public Button restartButton;
 
     // Start is called before the first frame update
     void Start()
@@ -47,6 +49,13 @@ public class GameManager : MonoBehaviour
         scoreText.text = "Score: " + score;
     }
 
+    public void GameOver()
+    {
+        gameOverText.gameObject.SetActive(true);
+        restartButton.gameObject.SetActive(true);
+        isGameActive = false;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -62,5 +71,10 @@ public class GameManager : MonoBehaviour
             int index = Random.Range(0, obstaclePrefabs.Count);
             Instantiate(obstaclePrefabs[index]);   
         }
+    }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
