@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    
+
     public GameObject[] obstaclePrefab;
     private Vector3 spawnPos = new Vector3(30, 1, 0);
     private float startDelay = 2;
@@ -19,7 +19,6 @@ public class GameManager : MonoBehaviour
     private int score;
     private float spawnRate = 1.0f;
     public TextMeshProUGUI scoreText;
-    public List<GameObject> obstaclePrefabs;
     public TextMeshProUGUI gameOverText;
     public Button restartButton;
 
@@ -49,6 +48,7 @@ public class GameManager : MonoBehaviour
         scoreText.text = "Score: " + score;
     }
 
+
     public void GameOver()
     {
         gameOverText.gameObject.SetActive(true);
@@ -68,8 +68,8 @@ public class GameManager : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(spawnRate);
-            int index = Random.Range(0, obstaclePrefabs.Count);
-            Instantiate(obstaclePrefabs[index]);   
+            //int index = 0; 
+            Instantiate(obstaclePrefab[0]);   
         }
     }
 

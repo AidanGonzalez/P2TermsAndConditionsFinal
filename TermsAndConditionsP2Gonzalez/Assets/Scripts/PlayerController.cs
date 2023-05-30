@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    private GameManager gameManager;
     private Rigidbody playerRb;
     private Animator playerAnim;
     private AudioSource playerAudio;
@@ -35,6 +36,15 @@ public class PlayerController : MonoBehaviour
             playerAnim.SetTrigger("Jump_trig");
             dirtParticle.Stop();
             playerAudio.PlayOneShot(jumpSound, 1.0f);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Destroy(gameObject);
+        if (!gameObject.CompareTag("Obsticle") && gameManager.isGameActive)
+        {
+            gameManager.GameOver();
         }
     }
 
