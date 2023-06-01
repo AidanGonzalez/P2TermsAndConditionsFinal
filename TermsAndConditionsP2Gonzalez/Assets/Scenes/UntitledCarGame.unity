@@ -590,7 +590,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 322778649}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.9, y: 3, z: -10}
+  m_LocalPosition: {x: 8.13, y: 3, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -912,11 +912,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96bd1be73b465c540abc23b55abd9309, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionParticle: {fileID: 0}
-  dirtParticle: {fileID: 0}
   jumpSound: {fileID: 8300000, guid: 87b2e1cd7ac32b4498cfdcdb7d9c7f03, type: 3}
   crashSound: {fileID: 8300000, guid: 37dd2d6e0dcf5c84bbd155ac9c03291c, type: 3}
-  jumpForce: 17
+  jumpForce: 16
   gravityModifier: 2.5
   isOnGround: 1
   gameOver: 0

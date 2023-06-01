@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     private PlayerController playerControllerScript;
     public GameObject titleScreen;
     public bool isGameActive;
-    private float spawnRate = 1.0f;
+    private float spawnRate = 3.0f;
     public TextMeshProUGUI gameOverText;
     public Button restartButton;
 
